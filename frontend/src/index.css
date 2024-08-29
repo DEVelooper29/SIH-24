@@ -1,0 +1,12 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Century Gothic', 'Arial', sans-serif; /* Century Gothic as primary font */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optionally, apply Century Gothic to other text elements if needed */
+h1, h2, h3, h4, h5, h6, p, span, a, li {
+  font-family: inherit; /* Ensures all text elements inherit the font from body */
+}

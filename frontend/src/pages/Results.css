@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: 'Century Gothic', 'Roboto', 'Arial', sans-serif; /* Century Gothic as primary font */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .results {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Century Gothic', 'Arial', sans-serif; /* Ensure Century Gothic is applied here too */
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2); /* Optional: to provide a slight background to content */
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .results::before {
+    content: "";
+    position: fixed; /* Full-screen background */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Use viewport width */
+    height: 100vh; /* Use viewport height */
+    background: url('https://images.pexels.com/photos/1334312/pexels-photo-1334312.jpeg') no-repeat center center;
+    background-size: cover;
+    opacity: 1;
+    z-index: -1;
+  }
+  
+  .images-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .image-item {
+    flex: 1 1 calc(33% - 20px); /* Adjust the width for responsiveness */
+    max-width: 300px;
+  }
+  
+  .image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .report-summary {
+    margin-bottom: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3); /* White background with some transparency */
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .disease-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .disease-card {
+    background: linear-gradient(135deg, #c8d5b9, #e0e0e0);
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 calc(50% - 20px);
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .disease-card h4 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .disease-card p {
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .disease-card .probability {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .disease-card .description {
+    font-style: italic;
+  }
+  
+  .disease-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .circular-progress {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+  }
+  
+  .circular-progress svg {
+    transform: rotate(-90deg);
+  }
+  
+  .circular-progress circle {
+    fill: none;
+    stroke-width: 10;
+  }
+  
+  .circular-progress .circle-bg {
+    stroke: #ddd;
+  }
+  
+  .circular-progress .circle-fg {
+    stroke: #2ecc71;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.3s ease;
+  }
+  
+  .circular-progress .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
