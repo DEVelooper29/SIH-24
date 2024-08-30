@@ -6,6 +6,10 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Navbar from './components/Navbar'
 import Results from './pages/Results'
+import Remedies from './pages/Remedies'
+import Remedies1 from './pages/Remedies1'
+import Diseases from './pages/Diseases'
+import Profile from './pages/Profile'
 
 function App() {
   const user = JSON.parse(localStorage.getItem("user")) || null;
@@ -31,6 +35,22 @@ function App() {
             <Route 
               path="/results" 
               element={user ? <Results /> : <Navigate to="/login" />} 
+            />
+            <Route 
+              path="/remedies" 
+              element={user ? <Remedies /> : <Navigate to="/login" />} 
+            />
+            <Route 
+              path="/remedies1" 
+              element={user ? <Remedies1 /> : <Navigate to="/login" />} 
+            />
+            <Route 
+              path="/diseases" 
+              element={user ? <Diseases /> : <Navigate to="/login" />} 
+            />
+            <Route 
+              path="/profile" 
+              element={user ? <Profile /> : <Navigate to="/login" />} 
             />
           </Routes>
         </div>

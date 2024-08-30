@@ -1,8 +1,9 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import './Results.css';
 
 const Results = () => {
   const location = useLocation();
+  const navigate = useNavigate(); // Hook to programmatically navigate
   const { images } = location.state || {}; // Retrieve images from navigation state
 
   // Example data (hardcoded)
@@ -12,13 +13,31 @@ const Results = () => {
     { name: "Downy Mildew", probability: "45%" },
     { name: "Blight", probability: "30%" },
     { name: "Rust", probability: "20%" },
-  ];
+    { name: "Anthracnose", probability: "50%" },
+    { name: "Botrytis (Gray Mold)", probability: "40%" },
+    { name: "Canker", probability: "25%" },
+    { name: "Verticillium Wilt", probability: "35%" },
+    { name: "Fusarium Wilt", probability: "55%" },
+];
+
 
   // Function to calculate the stroke-dashoffset for the circular progress
   const getStrokeDashoffset = (probability) => {
     const radius = 45; // Radius of the circle
     const circumference = 2 * Math.PI * radius;
     return circumference - (parseInt(probability) / 100) * circumference;
+  };
+
+  // Function to handle navigation to the remedies page based on disease name
+  const handleViewRemedies = (diseaseName) => {
+    if (diseaseName === "Powdery Mildew") {
+      navigate("/remedies1");
+    } else if (diseaseName === "Leaf Spot") {
+      navigate("/remedies");
+    } else {
+      // Add any other conditions or default behavior if needed
+      console.log("No specific route for this disease.");
+    }
   };
 
   return (
@@ -41,7 +60,6 @@ const Results = () => {
       {/* Report Summary */}
       <div className="report-summary">
         <h3>Diagnosis Summary</h3>
-        <p>The images have been analyzed and the following probable plant diseases have been detected:</p>
       </div>
 
       {/* Disease Cards */}
@@ -73,6 +91,13 @@ const Results = () => {
                 <div className="percentage">{disease.probability}</div>
               </div>
               <p className="description">This disease is characterized by {disease.name.toLowerCase()} symptoms.</p>
+              {/* View Remedies Button */}
+              <button
+                className="view-remedies-button"
+                onClick={() => handleViewRemedies(disease.name)} // Pass the disease name to the handler
+              >
+                View Remedies
+              </button>
             </div>
           );
         })}

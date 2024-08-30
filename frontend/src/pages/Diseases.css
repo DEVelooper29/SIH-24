@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: 'Century Gothic', 'Roboto', 'Arial', sans-serif;
+    background-image: url('https://image.slidesdocs.com/responsive-images/docs/golden-linear-draft-plant-with-cute-leaf-design-page-border-background-word-template_78ec526453__1131_1600.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+}
+.diseases-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Century Gothic', 'Roboto', 'Arial', sans-serif;
+    background-color: #faf3dd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .disease-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .disease-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .disease-card h3 {
+    color: #34495e;
+    margin-bottom: 10px;
+  }
+  
+  .read-more-button {
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .read-more-button:hover {
+    background-color: #1a242f;
+  }
+  
