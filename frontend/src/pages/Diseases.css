@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Century Gothic', 'Roboto', 'Arial', sans-serif;
     background-image: url('https://image.slidesdocs.com/responsive-images/docs/golden-linear-draft-plant-with-cute-leaf-design-page-border-background-word-template_78ec526453__1131_1600.jpg'); /* Replace with your image URL */
+    
     background-size: cover; /* Ensures the image covers the entire viewport */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */

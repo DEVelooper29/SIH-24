@@ -1,0 +1,10 @@
+svg {
+    display: inline-block;
+    vertical-align: middle;
+    height: 600px;
+    left: 25% !important;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

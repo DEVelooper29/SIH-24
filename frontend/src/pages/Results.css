@@ -106,6 +106,7 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }
+
   
   .circular-progress {
     position: relative;
@@ -116,6 +117,9 @@ body {
   
   .circular-progress svg {
     transform: rotate(-90deg);
+    transform: translate(0%, 0%);
+    position: 'relative';
+    zIndex: 1; 
   }
   
   .circular-progress circle {
@@ -150,8 +154,15 @@ body {
     padding: 10px 25px;
     cursor: pointer;
     margin-top: 10px;
-    transition: background-color 0.3s ease;
-  }
+    transition: background-color 0.3s ease;  
+    position: relative; /* Allows z-index to work */
+    z-index: 10; /* Higher than other elements like SVG */
+     
+    }
+    
+    
+    
+  
   
   .view-remedies-button:hover {
     background-color: #2980b9;

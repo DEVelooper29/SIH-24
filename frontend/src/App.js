@@ -10,9 +10,12 @@ import Remedies from './pages/Remedies'
 import Remedies1 from './pages/Remedies1'
 import Diseases from './pages/Diseases'
 import Profile from './pages/Profile'
+import MapCharts from './pages/MapCharts'
+import State from './pages/State'
 
 function App() {
-  const user = JSON.parse(localStorage.getItem("user")) || null;
+  // const user = JSON.parse(localStorage.getItem("user")) || null;
+  const user = true;
 
   return (
     <div className="App">
@@ -24,6 +27,8 @@ function App() {
               path="/" 
               element={user ? <Home /> : <Navigate to="/login" />} 
             />
+             <Route path="/india" element={<MapCharts />} />
+             <Route path="/state" element={<State />} />
             <Route 
               path="/login" 
               element={!user ? <Login /> : <Navigate to="/" />} 

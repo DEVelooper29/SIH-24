@@ -28,6 +28,8 @@
     color: white;
     background: url(https://static.vecteezy.com/system/resources/previews/047/385/522/non_2x/young-green-plants-sprouting-from-the-soil-with-the-sun-s-rays-c-free-photo.jpg) center center no-repeat;
     background-size: cover;
+    opacity: 0.7; /* Adjust opacity as needed */
+
   }
   
   .hero-title {
