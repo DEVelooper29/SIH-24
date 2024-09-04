@@ -47,6 +47,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         {/* Drag-and-Drop Area */}
+        <h2>Crop Disease Detector</h2>
         <div 
           className={`drop-zone ${dragging ? 'dragging' : ''}`} 
           onDragOver={handleDragOver} 
@@ -75,10 +76,22 @@ const Home = () => {
 
       {/* Additional Content */}
       <article>
-        <h2>Some additional content</h2>
-        <p>The rest of the page content continues below the hero. You can use the hero at the top of your page, e.g., the home page. A hero is great to display a high-quality picture together with a catchy title.</p>
-        <p>Ad donec tincidunt torquent ultricies convallis sodales faucibus magna, fringilla lorem blandit sollicitudin donec faucibus curae orci molestie, et proin curae aliquet venenatis ligula amet vivamus orci varius arcu.</p>
-        <p>Laoreet fusce condimentum venenatis quisque imperdiet ornare cras faucibus convallis, pharetra habitasse elementum ut bibendum per sociosqu phasellus etiam, velit faucibus integer torquent leo elementum maecenas netus.</p>
+        <h2>Tips for Farmers to Improve Agricultural Productivity</h2>
+        <h3>1. Soil Health Management</h3>
+        <p>Maintaining soil health is crucial for crop production. Regularly test the soil to monitor its nutrient levels and pH balance. Use organic matter like compost to improve soil structure and fertility.</p>
+
+        <h3>2. Efficient Water Management</h3>
+        <p>Optimize your irrigation practices by adopting techniques like drip irrigation, which minimizes water waste. Collecting rainwater and using moisture sensors can also help in effective water management.</p>
+
+        <h3>3. Crop Rotation and Diversification</h3>
+        <p>Rotate crops annually to improve soil fertility and reduce the risk of pests and diseases. Diversifying crops can also lead to better resilience against market fluctuations and climatic conditions.</p>
+
+        <h3>4. Integrated Pest Management (IPM)</h3>
+        <p>Implement IPM techniques to reduce the reliance on chemical pesticides. This includes biological controls, crop rotation, and the use of resistant crop varieties to manage pests effectively.</p>
+
+        <h3>5. Precision Agriculture</h3>
+        <p>Leverage modern technology like GPS, drones, and sensors to monitor crop health and soil conditions. Precision agriculture can help optimize inputs like seeds, water, and fertilizers, leading to higher yields and reduced costs.</p>
+
       </article>
     </div>
   );

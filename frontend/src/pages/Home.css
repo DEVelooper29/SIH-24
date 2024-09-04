@@ -28,7 +28,7 @@
     color: white;
     background: url(https://static.vecteezy.com/system/resources/previews/047/385/522/non_2x/young-green-plants-sprouting-from-the-soil-with-the-sun-s-rays-c-free-photo.jpg) center center no-repeat;
     background-size: cover;
-    opacity: 0.7; /* Adjust opacity as needed */
+    opacity: 0.9; /* Adjust opacity as needed */
 
   }
   
@@ -73,15 +73,17 @@
   /* Drop Zone styles */
   .drop-zone {
     border: 2px dashed white;
-    padding: 40px; /* Increased padding to make drop zone bigger */
+    padding: 40px; 
     text-align: center;
     margin: 150px 150px;
     transition: background-color 0.3s;
     width: 900px;
-
-    height: 350px; /* Set a fixed height to increase the size */
+    height: 250px; /* Set a fixed height to increase the size */
     background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 10px;
+    margin-left: 200px;
   }
+
   
   .drop-zone p {
     margin: 0;
@@ -91,11 +93,13 @@
   
   .drop-zone.dragging {
     background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 10px;
   }
   .plus-sign {
     width: 50px; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
     padding-top: 50px;
+    margin-left: 400px;
 }
   
   
